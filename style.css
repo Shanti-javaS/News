@@ -1,0 +1,133 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #282c34;
+    --secondary-color: #61dafb;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.news {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.news-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.news-item p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .news-item h3 {
+        font-size: 1.5rem;
+    }
+}
