@@ -1,18 +1,22 @@
-{
+/* Сброс базовых стилей */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Цветовые переменные */
 :root {
-    --primary-color: #282c34;
-    --secondary-color: #61dafb;
-    --background-color: #f4f4f4;
-    --text-color: #333;
+    --primary-color: #ff00ff; /* Фуксия */
+    --secondary-color: #dc143c; /* Малиновый */
+    --background-color: #f8f0fc;
+    --text-color: #222;
+    --accent-color: #ffffff;
 }
 
+/* Основные стили */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -20,14 +24,15 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -42,36 +47,41 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
+/* Блок-герой */
 .hero {
     background-color: var(--secondary-color);
-    padding: 50px 0;
+    padding: 60px 0;
     text-align: center;
-    color: white;
+    color: var(--accent-color);
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
+/* Новости */
 .news {
     padding: 40px 0;
-    background-color: white;
+    background-color: var(--accent-color);
 }
 
 .container {
@@ -81,11 +91,11 @@ nav ul li a:hover {
 
 .news-item {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--secondary-color);
 }
 
 .news-item h3 {
@@ -108,11 +118,38 @@ nav ul li a:hover {
 
 .read-more:hover {
     text-decoration: underline;
+    color: #b2002d;
 }
 
+/* Кнопки сортировки */
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sort-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sort-buttons button:hover {
+    background-color: #c000c0;
+    transform: scale(1.05);
+}
+
+/* Подвал */
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
@@ -120,6 +157,7 @@ footer {
 
 footer p {
     font-size: 1rem;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
